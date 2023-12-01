@@ -188,6 +188,7 @@ h6 {
 .navbar a:hover,
 .navbar .active,
 .navbar .active:focus,
+
 .navbar li:hover>a {
   opacity: 0.8;
   color: #4CAF50;
@@ -969,10 +970,12 @@ section {
 }
 
 .portfolio #portfolio-flters li:hover,
-.portfolio #portfolio-flters li.filter-active {
-  background: #47b2e4;
+.portfolio #portfolio-flters li.filter-active,{
+  
+  background: #0A6522;
   color: #fff;
 }
+
 
 .portfolio .portfolio-item {
   margin-bottom: 30px;
@@ -1833,4 +1836,7 @@ section {
   #footer .credits {
     padding-top: 4px;
   }
+}
+.recent-sales {
+  margin-top: 50px;
 }
