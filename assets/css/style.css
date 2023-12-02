@@ -970,7 +970,7 @@ section {
 }
 
 .portfolio #portfolio-flters li:hover,
-.portfolio #portfolio-flters li.filter-active,{
+.portfolio #portfolio-flters li.filter-active{
   
   background: #0A6522;
   color: #fff;
