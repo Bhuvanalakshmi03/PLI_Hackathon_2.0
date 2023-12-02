@@ -492,18 +492,6 @@
  
 
 })()
-const portfolioFilters = document.querySelectorAll('#portfolio-flters li');
 
-portfolioFilters.forEach(filter => {
-  filter.addEventListener('mouseenter', () => {
-    filter.style.background = '#0A6522';
-    filter.style.color = '#fff';
-  });
-
-  filter.addEventListener('mouseleave', () => {
-    filter.style.background = '';
-    filter.style.color = '';
-  });
-});
 
 
