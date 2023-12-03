@@ -419,7 +419,7 @@
             </li>
 
             <li><a class="dropdown-item" href="#">Today</a></li>
-            <li><a class="dropdown-item" href="#">Month</a></li>
+            <li><a class="dropdown-item" href="#">This Month</a></li>
             <li><a class="dropdown-item" href="#">This Year</a></li>
           </ul>
         </div>
@@ -430,30 +430,48 @@
           <table class="table table-borderless datatable">
             <thead>
               <tr>
+                <th scope="col">#</th>
                 <th scope="col">Customer</th>
+                <th scope="col">Product</th>
                 <th scope="col">Price</th>
+                <th scope="col">Status</th>
               </tr>
             </thead>
             <tbody>
               <tr>
+                <th scope="row"><a href="#">#2457</a></th>
                 <td>Brandon Jacob</td>
+                <td><a href="#" class="text-primary">At praesentium minu</a></td>
                 <td>$64</td>
+                <td><span class="badge bg-success">Approved</span></td>
               </tr>
               <tr>
+                <th scope="row"><a href="#">#2147</a></th>
                 <td>Bridie Kessler</td>
+                <td><a href="#" class="text-primary">Blanditiis dolor omnis similique</a></td>
                 <td>$47</td>
+                <td><span class="badge bg-warning">Pending</span></td>
               </tr>
               <tr>
+                <th scope="row"><a href="#">#2049</a></th>
                 <td>Ashleigh Langosh</td>
+                <td><a href="#" class="text-primary">At recusandae consectetur</a></td>
                 <td>$147</td>
+                <td><span class="badge bg-success">Approved</span></td>
               </tr>
               <tr>
+                <th scope="row"><a href="#">#2644</a></th>
                 <td>Angus Grady</td>
+                <td><a href="#" class="text-primar">Ut voluptatem id earum et</a></td>
                 <td>$67</td>
+                <td><span class="badge bg-danger">Rejected</span></td>
               </tr>
               <tr>
+                <th scope="row"><a href="#">#2644</a></th>
                 <td>Raheem Lehner</td>
+                <td><a href="#" class="text-primary">Sunt similique distinctio</a></td>
                 <td>$165</td>
+                <td><span class="badge bg-success">Approved</span></td>
               </tr>
             </tbody>
           </table>
@@ -710,45 +728,103 @@
 
                             	
                                
-          <div class="row">
+          <!-- <div class="row">
 <div class="col-md-4 col-sm-6">
 <div class="card mb-30"><a class="card-img-tiles" href="#" data-abc="true">
-<div class="inner">
+<div class="inner"> -->
 <!-- <div class="main-img"><img src="https://i.imgur.com/O0GMYuw.jpg" alt="Category"></div>
 <div class="thumblist"><img src="https://i.imgur.com/ILEU18M.jpg" alt="Category"><img src="https://i.imgur.com/2kePJmX.jpg" alt="Category"></div> -->
-</div></a>
+<!-- </div></a>
 <div class="card-body text-center">
 <h4 class="card-title">AAA</h4>
 <p class="text-muted">$499</p><a class="btn btn-outline-primary btn-sm" href="#" data-abc="true">View Details</a>
 </div>
 </div>
-</div>
-<div class="col-md-4 col-sm-6">
+</div> -->
+<!-- <div class="col-md-4 col-sm-6">
 <div class="card mb-30"><a class="card-img-tiles" href="#" data-abc="true">
-<div class="inner">
+<div class="inner"> -->
  <!-- <div class="main-img"><img src="https://i.imgur.com/uRgdVY1.jpg" alt="Category"></div>
 <div class="thumblist"><img src="https://i.imgur.com/VwSKS7A.jpg" alt="Category"><img src="https://i.imgur.com/gTvZ2H5.jpg" alt="Category"></div> -->
-</div></a> 
+<!-- </div></a> 
 <div class="card-body text-center">
 <h4 class="card-title">BBB</h4>
 <p class="text-muted">$50</p><a class="btn btn-outline-primary btn-sm" href="#" data-abc="true">View Details</a>
 </div>
-</div>
-</div>
+</div> -->
+<!-- </div>
 <div class="col-md-4 col-sm-6">
 <div class="card mb-30"><a class="card-img-tiles" href="#" data-abc="true">
-<div class="inner">
+<div class="inner"> -->
 <!-- <div class="main-img"><img src="https://i.imgur.com/0jO40CF.jpg" alt="Category"></div>
 <div class="thumblist"><img src="https://i.imgur.com/dWYAg41.jpg" alt="Category"><img src="https://i.imgur.com/5oQEZSC.jpg" alt="Category"></div>
 </div></a> -->
-<div class="card-body text-center">
+<!-- <div class="card-body text-center">
 <h4 class="card-title">CCC</h4>
 <p class="text-muted">$9</p><a class="btn btn-outline-primary btn-sm" href="#" data-abc="true">View Details</a>
 </div>
 </div>
 </div>
 </div>
-</div>
+</div> -->
+<div class="col-12"> 
+      <div class="card recent-sales overflow-auto">
+
+        <div class="filter">
+          <a class="icon" href="#" data-bs-toggle="dropdown"></a>
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+            <li class="dropdown-header text-start">
+              <h6>Filter</h6>
+            </li>
+
+            <li><a class="dropdown-item" href="#">Today</a></li>
+            <li><a class="dropdown-item" href="#">This Month</a></li>
+            <li><a class="dropdown-item" href="#">This Year</a></li>
+          </ul>
+        </div>
+
+        <div class="card-body">
+          <h5 class="card-title">Recent Sales <span>| Today</span></h5>
+ 
+          <table class="table table-borderless datatable"> 
+            <thead>
+              <tr>
+                
+                <th scope="col">Customer</th>
+                
+                <th scope="col">Price</th>
+                
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                
+                <td>Brandon Jacob</td>
+                <td>$64</td>
+              </tr>
+              <tr>
+                <td>Bridie Kessler</td>
+                <td>$47</td>
+              </tr>
+              <tr>
+                <td>Ashleigh Langosh</td>
+                <td>$147</td>
+              </tr>
+              <tr>
+                <td>Angus Grady</td>
+                <td>$67</td>
+              </tr>
+              <tr>
+                <td>Raheem Lehner</td>
+                <td>$165</td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+
+      </div>
+    </div>
       </div>
     </section><!-- End Pricing Section -->
 
