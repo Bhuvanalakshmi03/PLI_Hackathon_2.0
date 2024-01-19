@@ -27,6 +27,11 @@ app.get('/reg2', (req, res) => {
   res.render('reg2');
 });
 
+app.get('/userprofile', (req, res) => {
+  res.render('userprofile');
+});
+
+
 
 // Start the server
 const PORT = process.env.PORT || 4000;

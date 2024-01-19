@@ -66,6 +66,7 @@
                 <li><a href="#">Deep Drop Down 5</a></li>
               </ul>
             </li> -->
+            <li><a href="/userprofile">Profile</a></li>
             <li><a href="/reg">Public</a></li>
             <li><a href="/reg1">Companies</a></li>
             <li><a href="/reg2">Government</a></li>
@@ -134,6 +135,39 @@
 
       </div>
     </section><!-- End About Us Section -->
+
+
+
+
+    <!-- video section -->
+    <section style="overflow: hidden; display: flex; align-items: center; justify-content: center;">
+      <div id="video-container">
+          <div class="video-card" onclick="showVideo(0)">
+              <video src="video1.mp4" paused controls></video>
+          </div>
+          <div class="video-card" onclick="showVideo(1)">
+              <video src="video2.mp4" paused controls></video>
+          </div>
+          <div class="video-card" onclick="showVideo(2)">
+              <video src="video3.mp4" paused controls></video>
+          </div>
+          <!-- Add more video cards as needed -->
+      </div>
+    </section>
+      
+  
+    <div class="fullscreen-overlay" id="fullscreen-overlay" onclick="closeFullscreen()">
+      <div class="fullscreen-video" id="fullscreen-video">
+          <video src="" controls></video>
+          <div class="close-button" onclick="closeFullscreen()">X</div>
+      </div>
+  </div>
+  <!-- video section end -->
+
+
+
+
+
 
     <!-- ======= Why Us Section ======= -->
     <section id="why-us" class="why-us section-bg">
@@ -1093,6 +1127,25 @@
 
   <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+
+  <script>
+    function showVideo(index) {
+        const videoSrc = document.querySelectorAll('.video-card video')[index].src;
+        const fullscreenVideo = document.getElementById('fullscreen-video');
+        fullscreenVideo.querySelector('video').src = videoSrc;
+
+        document.getElementById('fullscreen-overlay').style.display = 'flex';
+    }
+
+    function closeFullscreen() {
+        document.getElementById('fullscreen-overlay').style.display = 'none';
+    }
+</script>
+
+
+
+
 
   <!-- Vendor JS Files -->
   <script src="/vendor/aos/aos.js"></script>
