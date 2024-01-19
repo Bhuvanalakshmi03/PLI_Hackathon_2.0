@@ -27,9 +27,15 @@ app.get('/reg2', (req, res) => {
   res.render('reg2');
 });
 
+
 app.get('/leaderboard', (req, res) => {
   res.render('leaderboard');
 });
+
+app.get('/userprofile', (req, res) => {
+  res.render('userprofile');
+});
+
 
 // Start the server
 const PORT = process.env.PORT || 4000;

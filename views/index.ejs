@@ -94,6 +94,48 @@
       </div>
     </section><!-- End About Us Section -->
 
+
+
+
+    <!-- video section -->
+
+    <div class="section-title">
+      <h2>REC 101: Green Energy Unveiled</h2>
+      <P style="width: 80%; margin-left:auto; margin-right: auto;">Explore the basics of Renewable Energy Certificates (RECs) in this informative series, guiding viewers through the concepts, impact, and how to engage in buying and selling to make a positive environmental difference. Join us in empowering a greener world!</P>
+    </div>
+
+
+    <section style="overflow: hidden; display: flex; align-items: center; justify-content: center;">
+
+
+      <div id="video-container">
+          <div class="video-card" onclick="showVideo(0)">
+              <video src="video1.mp4" paused controls></video>
+          </div>
+          <div class="video-card" onclick="showVideo(1)">
+              <video src="video2.mp4" paused controls></video>
+          </div>
+          <div class="video-card" onclick="showVideo(2)">
+              <video src="video3.mp4" paused controls></video>
+          </div>
+          <!-- Add more video cards as needed -->
+      </div>
+    </section>
+      
+  
+    <div class="fullscreen-overlay" id="fullscreen-overlay" onclick="closeFullscreen()">
+      <div class="fullscreen-video" id="fullscreen-video">
+          <video src="" controls></video>
+          <div class="close-button" onclick="closeFullscreen()">X</div>
+      </div>
+  </div>
+  <!-- video section end -->
+
+
+
+
+
+
     <!-- ======= Why Us Section ======= -->
     <section id="why-us" class="why-us section-bg">
       <div class="container-fluid" data-aos="fade-up">
@@ -546,11 +588,17 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Team</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <h2>Champions of Sustainability</h2>
+          <p>As Champions of Sustainability, these entities are dedicated to making a significant impact on the environment. Through their unwavering commitment to utilizing Renewable Energy Certificates (RECs), they embody a shared vision of fostering a greener world and inspire others to join the journey towards a sustainable future.</p>
         </div>
 
         <div class="row">
+
+          
+        <div class="champ-title">
+          <h2>EcoChampion</h2>
+        </div>
+
 
           <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="100">
             <div class="member d-flex align-items-start">
@@ -559,12 +607,12 @@
                 <h4>Walter White</h4>
                 <span>Chief Executive Officer</span>
                 <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
-                <div class="social">
+                <!-- <div class="social">
                   <a href=""><i class="ri-twitter-fill"></i></a>
                   <a href=""><i class="ri-facebook-fill"></i></a>
                   <a href=""><i class="ri-instagram-fill"></i></a>
                   <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
@@ -576,15 +624,21 @@
                 <h4>Sarah Jhonson</h4>
                 <span>Product Manager</span>
                 <p>Aut maiores voluptates amet et quis praesentium qui senda para</p>
-                <div class="social">
+                <!-- <div class="social">
                   <a href=""><i class="ri-twitter-fill"></i></a>
                   <a href=""><i class="ri-facebook-fill"></i></a>
                   <a href=""><i class="ri-instagram-fill"></i></a>
                   <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
+
+             
+        <div class="champ-title">
+          <h2>GreenTrailblazer</h2>
+        </div>
+
 
           <div class="col-lg-6 mt-4" data-aos="zoom-in" data-aos-delay="300">
             <div class="member d-flex align-items-start">
@@ -593,12 +647,12 @@
                 <h4>William Anderson</h4>
                 <span>CTO</span>
                 <p>Quisquam facilis cum velit laborum corrupti fuga rerum quia</p>
-                <div class="social">
+                <!-- <div class="social">
                   <a href=""><i class="ri-twitter-fill"></i></a>
                   <a href=""><i class="ri-facebook-fill"></i></a>
                   <a href=""><i class="ri-instagram-fill"></i></a>
                   <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
@@ -610,12 +664,12 @@
                 <h4>Amanda Jepson</h4>
                 <span>Accountant</span>
                 <p>Dolorum tempora officiis odit laborum officiis et et accusamus</p>
-                <div class="social">
+                <!-- <div class="social">
                   <a href=""><i class="ri-twitter-fill"></i></a>
                   <a href=""><i class="ri-facebook-fill"></i></a>
                   <a href=""><i class="ri-instagram-fill"></i></a>
                   <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
@@ -970,6 +1024,25 @@
 
   <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+
+  <script>
+    function showVideo(index) {
+        const videoSrc = document.querySelectorAll('.video-card video')[index].src;
+        const fullscreenVideo = document.getElementById('fullscreen-video');
+        fullscreenVideo.querySelector('video').src = videoSrc;
+
+        document.getElementById('fullscreen-overlay').style.display = 'flex';
+    }
+
+    function closeFullscreen() {
+        document.getElementById('fullscreen-overlay').style.display = 'none';
+    }
+</script>
+
+
+
+
 
   <!-- Vendor JS Files -->
   <script src="/vendor/aos/aos.js"></script>
