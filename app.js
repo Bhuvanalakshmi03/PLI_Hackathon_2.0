@@ -27,6 +27,9 @@ app.get('/reg2', (req, res) => {
   res.render('reg2');
 });
 
+app.get('/leaderboard', (req, res) => {
+  res.render('leaderboard');
+});
 
 // Start the server
 const PORT = process.env.PORT || 4000;
