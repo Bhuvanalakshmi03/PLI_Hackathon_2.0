@@ -1142,7 +1142,7 @@ section {
   font-weight: 700;
   margin-bottom: 5px;
   font-size: 20px;
-  color: #37517e;
+  color: #0A6522;
 }
 
 .team .member span {
@@ -1188,13 +1188,13 @@ section {
 }
 
 .team .member .social a i {
-  color: #37517e;
+  color: #0A6522;
   font-size: 16px;
   margin: 0 2px;
 }
 
 .team .member .social a:hover {
-  background: #47b2e4;
+  background: #4CAF50;
 }
 
 .team .member .social a:hover i {
@@ -2336,4 +2336,17 @@ ul.summary-list > li:last-child  {
   color:#4CAF50;
 }
 
+.champ-title{
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.champ-title h2{
+  font-size: 32px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  color: #0A6522;
+}
 
