@@ -37,6 +37,11 @@ app.get('/userprofile', (req, res) => {
 });
 
 
+app.get('/learning', (req, res) => {
+  res.render('learning');
+});
+
+
 // Start the server
 const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
