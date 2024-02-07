@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Your Project</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+        /* Add your custom styles here */
+        body {
+            background-color: #f0f0f0;
+        }
+        .hero-section {
+            text-align: center;
+            padding: 100px 0;
+            background-color: #28a745;
+            color: #fff;
+        }
+        .navbar {
+            background-color: #28a745;
+        }
+        .card {
+            margin-bottom: 20px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .slide-card {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+        }
+        .slide-card .card {
+            flex: 0 0 auto;
+            scroll-snap-align: start;
+            margin-right: 10px;
+        }
+        .prize-section {
+            background-color: #fff;
+            padding: 50px 0;
+        }
+        .faq-section {
+            background-color: #f0f0f0;
+            padding: 50px 0;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="#"><img src="your-logo.png" alt="Logo" style="height: 30px;"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Leaderboard</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Trading</a></li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    Profile
+                </a>
+                <div class="dropdown-menu" aria-labelledby="profileDropdown">
+                    <a class="dropdown-item" href="#">Register</a>
+                    <a class="dropdown-item" href="#">Login</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container">
+        <h1>Your Hero Section Title</h1>
+        <p>Your Hero Section Content</p>
+    </div>
+</section>
+
+<!-- Cards Section -->
+<section class="container">
+    <h2 class="text-center mb-4">Discover the World of Recs</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="fas fa-graduation-cap"></i> Learning</h5>
+                    <p class="card-text">Learn and be aware of the recs.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="fas fa-chart-line"></i> Trading</h5>
+                    <p class="card-text">Explore and trade recs in real-time.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="fas fa-trophy"></i> Leaderboard</h5>
+                    <p class="card-text">Compete and see where you stand.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="fas fa-user-plus"></i> Register</h5>
+                    <p class="card-text">Join our community and register for recs.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card" data-toggle="modal" data-target="#benefitsModal">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="fas fa-gift"></i> Benefits</h5>
+                    <p class="card-text">Unlock exclusive benefits with your recs.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Benefits Section -->
+<div id="benefitsModal" class="modal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Benefits</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <ul>
+                    <li>Unlock premium features</li>
+                    <li>Access to exclusive events</li>
+                    <li>Early access to new features</li>
+                    <li>Personalized recommendations</li>
+                    <li>Special discounts and offers</li>
+                    <li>Priority customer support</li>
+                    <li>Community recognition</li>
+                    <li>Participate in beta programs</li>
+                    <li>Exclusive badges and achievements</li>
+                    <li>Monthly giveaways and contests</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Leaderboard Section -->
+<section class="container mt-4">
+    <div class="slide-card">
+        <div class="card" style="width: 18rem;">
+            <img src="sample-image1.jpg" class="card-img-top" alt="Leader1">
+            <div class="card-body">
+                <h5 class="card-title">John Doe</h5>
+                <p class="card-text">Rec Count: 500</p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <!-- Add content for the second leaderboard card -->
+        </div>
+        <!-- Add similar cards for Leaderboard here -->
+    </div>
+</section>
+
+<!-- Prize Section -->
+<section class="prize-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="prize-image1.jpg" class="card-img-top" alt="Prize1">
+                    <div class="card-body">
+                        <h5 class="card-title">First Prize</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <!-- Add content for the second prize card -->
+            </div>
+            <!-- Add similar cards for Prize here -->
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="faq-section">
+    <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div>
+            <h5>Question 1?</h5>
+            <p>Answer to question 1.</p>
+        </div>
+        <div>
+            <h5>Question 2?</h5>
+            <p>Answer to question 2.</p>
+        </div>
+        <!-- Add more FAQ content as needed -->
+    </div>
+</section>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

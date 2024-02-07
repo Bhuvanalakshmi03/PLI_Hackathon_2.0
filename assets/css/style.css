@@ -2350,3 +2350,39 @@ ul.summary-list > li:last-child  {
   color: #0A6522;
 }
 
+
+a {
+  color: inherit; 
+  text-decoration: none; 
+}
+
+a.back-to-top {
+  background-color: #28a745; /* Set the desired green color */
+  color: #fff; /* Set the text color to white */
+  border-radius: 50%; /* Optional: Make it a circle */
+  padding: 10px; /* Optional: Add padding for better visibility and clickability */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  text-decoration: none;
+  transition: background-color 0.3s ease; /* Optional: Add a smooth transition effect */
+}
+
+/* Hover style for the back-to-top link */
+a.back-to-top:hover {
+  background-color: #218838; /* Change color on hover (adjust as needed) */
+}
+
+.certificate-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.certificate-info i {
+  color: #28a745; /* Set the desired green color for the icons */
+  margin-right: 5px; /* Add some space between the icon and text */
+}
+
+
+
