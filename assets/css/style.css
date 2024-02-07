@@ -2357,20 +2357,20 @@ a {
 }
 
 a.back-to-top {
-  background-color: #28a745; /* Set the desired green color */
-  color: #fff; /* Set the text color to white */
-  border-radius: 50%; /* Optional: Make it a circle */
-  padding: 10px; /* Optional: Add padding for better visibility and clickability */
+  background-color: #28a745; 
+  color: #fff; 
+  border-radius: 50%;
+  padding: 10px; 
   position: fixed;
   bottom: 20px;
   right: 20px;
   text-decoration: none;
-  transition: background-color 0.3s ease; /* Optional: Add a smooth transition effect */
+  transition: background-color 0.3s ease; 
 }
 
-/* Hover style for the back-to-top link */
+
 a.back-to-top:hover {
-  background-color: #218838; /* Change color on hover (adjust as needed) */
+  background-color: #218838; 
 }
 
 .certificate-info {
@@ -2380,8 +2380,8 @@ a.back-to-top:hover {
 }
 
 .certificate-info i {
-  color: #28a745; /* Set the desired green color for the icons */
-  margin-right: 5px; /* Add some space between the icon and text */
+  color: #28a745;
+  margin-right: 5px; 
 }
 
 
