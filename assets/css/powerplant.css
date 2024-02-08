@@ -1,0 +1,45 @@
+/* Powerplant Intro Section */
+section .powerplant-intro {
+    padding: 100px 0;
+    background: #0A6522 !important;
+    color:#f3f5fa !important;
+    text-align: center;
+    justify-content: center;
+  }
+  .powerplant-intro h4 {
+    
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  .powerplant-intro h1 {
+    color: #007bff;
+    font-size: 48px;
+    margin-bottom: 30px;
+  }
+  .powerplant-intro p {
+    font-size: 20px;
+    margin-bottom: 40px;
+    max-width: 500px;
+    margin: 0 auto;
+    color:#fff !important;
+  }
+  .powerplant-intro .btn-get-started {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    padding: 10px 30px;
+    font-size: 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  .powerplant-intro .btn-get-started:hover {
+    background-color: #0056b3;
+    border-color: #004999;
+  }
+  .powerplant-intro .hero-img {
+    margin-top: -50px;
+  }
+  /* Table Container */
+  #tableContainer {
+    margin-top: 50px;
+  }

@@ -50,7 +50,7 @@ html {
   }
   
   a {
-    color: var(--primary);
+    color:white;
     text-decoration: none;
     transition: all 120ms ease-out 0s;
     display: inline-block;
@@ -173,7 +173,7 @@ html {
     }
   }
   .c-list__grid {
-    display: grid;
+    display: flex;
     grid-template-columns: 4.8rem 3fr 1fr;
     grid-column-gap: 2.4rem;
   }
@@ -187,13 +187,14 @@ html {
   .c-media {
     display: inline-flex;
     align-items: center;
+    width: 65%;
   }
   .c-media__content {
-    padding-left: 1.6rem;
+    padding-left: 1rem;
   }
   @media screen and (max-width: 700px) {
     .c-media__content {
-      padding-left: 0.8rem;
+      padding-left: 0.5rem;
     }
   }
   .c-media__title {

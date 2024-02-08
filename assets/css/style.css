@@ -1652,6 +1652,9 @@ section {
 #footer {
   font-size: 14px;
   background: #0A6522;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 #footer .footer-newsletter {
