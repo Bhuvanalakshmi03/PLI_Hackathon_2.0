@@ -45,6 +45,10 @@ app.get('/profile', (req, res) => {
   res.render('profile');
 });
 
+app.get('/login', (req, res) => {
+  res.render('login');
+});
+
 
 // Start the server
 const PORT = process.env.PORT || 4000;
