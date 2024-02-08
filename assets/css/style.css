@@ -1652,6 +1652,9 @@ section {
 #footer {
   font-size: 14px;
   background: #0A6522;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 #footer .footer-newsletter {
@@ -2349,4 +2352,40 @@ ul.summary-list > li:last-child  {
   padding-bottom: 20px;
   color: #0A6522;
 }
+
+
+a {
+  color: inherit; 
+  text-decoration: none; 
+}
+
+a.back-to-top {
+  background-color: #28a745; 
+  color: #fff; 
+  border-radius: 50%;
+  padding: 10px; 
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  text-decoration: none;
+  transition: background-color 0.3s ease; 
+}
+
+
+a.back-to-top:hover {
+  background-color: #218838; 
+}
+
+.certificate-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.certificate-info i {
+  color: #28a745;
+  margin-right: 5px; 
+}
+
+
 

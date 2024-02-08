@@ -1,0 +1,82 @@
+body {
+    background-color: #f8f9fa;
+  }
+
+  .video-container {
+    background-color: #0A6522; 
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+
+  .video-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .video-card {
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+    cursor: pointer;
+    background-color: #fff; 
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .video-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .video-card video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+  }
+
+  .video-description {
+    margin-top: 10px;
+    color: #333;
+  }
+
+
+#fullscreen-overlay {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 1000px;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    z-index: 1050;
+  }
+
+  #fullscreen-video {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+  }
+
+  #fullscreen-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+  }
+
+  #close-fullscreen {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 30px;
+    z-index: 10;
+  }
