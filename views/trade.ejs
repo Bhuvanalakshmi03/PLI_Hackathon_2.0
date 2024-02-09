@@ -1,92 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SURYALEKH</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    /* Optional CSS for styling */
-    .container {
-      margin-top: 50px;
-    }
-    .iframe-container {
-      display: none;
-    }
-    .submenu {
-      width: 200px; /* Adjust width as needed */
-    }
-    .content {
-      margin-left: 220px; /* Adjust margin as needed */
-    }
-  </style>
-</head>
+
+  <%- include('../templates/head') %>
+
 <body>
 
-<div class="container">
-  <h2>Trade your RENEWABLE ENERGY CERTIFICATE</h2>
-  
-  <div class="row">
-    <!-- Vertical Sub Navbar -->
-    <div class="col-sm-3 submenu">
-      <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-        <a class="nav-link active" id="v-pills-page1-tab" data-bs-toggle="pill" href="#v-pills-page1" role="tab" aria-controls="v-pills-page1" aria-selected="true" onclick="showIframe('iframe1')">Create issue certificate report </a>
-        <a class="nav-link" id="v-pills-page2-tab" data-bs-toggle="pill" href="#v-pills-page2" role="tab" aria-controls="v-pills-page2" aria-selected="false" onclick="showIframe('iframe2')">Redeem</a>
-        <a class="nav-link" id="v-pills-page3-tab" data-bs-toggle="pill" href="#v-pills-page3" role="tab" aria-controls="v-pills-page3" aria-selected="false" onclick="showIframe('iframe3')">Buy</a>
-        <a class="nav-link" id="v-pills-page4-tab" data-bs-toggle="pill" href="#v-pills-page4" role="tab" aria-controls="v-pills-page4" aria-selected="false" onclick="showIframe('iframe4')">Sell</a>
-        <a class="nav-link" id="v-pills-page4-tab" data-bs-toggle="pill" href="#v-pills-page4" role="tab" aria-controls="v-pills-page4" aria-selected="false" onclick="showIframe('iframe5')">Stats</a>
-    </div>
-    </div>
-  
-    <!-- Content -->
-    <div class="col-sm-9 content">
-      <!-- Iframe Content -->
-      <div class="tab-content" id="v-pills-tabContent">
-        <div class="tab-pane fade show active" id="v-pills-page1" role="tabpanel" aria-labelledby="v-pills-page1-tab">
-          <div id="iframe1" class="iframe-container">
-            <iframe src="page1.html" width="100%" height="500px" frameborder="0"></iframe>
-          </div>
-        </div>
-        <div class="tab-pane fade" id="v-pills-page2" role="tabpanel" aria-labelledby="v-pills-page2-tab">
-          <div id="iframe2" class="iframe-container">
-            <iframe src="page2.html" width="100%" height="500px" frameborder="0"></iframe>
-          </div>
-        </div>
-        <div class="tab-pane fade" id="v-pills-page3" role="tabpanel" aria-labelledby="v-pills-page3-tab">
-          <div id="iframe3" class="iframe-container">
-            <iframe src="page3.html" width="100%" height="500px" frameborder="0"></iframe>
-          </div>
-        </div>
-        <div class="tab-pane fade" id="v-pills-page4" role="tabpanel" aria-labelledby="v-pills-page4-tab">
-          <div id="iframe4" class="iframe-container">
-            <iframe src="page4.html" width="100%" height="500px" frameborder="0"></iframe>
-          </div>
-        </div>
-        <div class="tab-pane fade" id="v-pills-page4" role="tabpanel" aria-labelledby="v-pills-page4-tab">
-            <div id="iframe5" class="iframe-container">
-              <iframe src="page5.html" width="100%" height="500px" frameborder="0"></iframe>
+  <%- include('../templates/nav') %>
+
+<div class="container mt-4">
+  <table class="table" style="margin-top:150px;">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Info</th>
+        <th>Device Type</th>
+        <th>Date</th>
+        <th>Grid Operator</th>
+        <th>MWh</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="custom-card">
+        <td>1</td>
+        <td>
+          <span class="icon-container" data-toggle="collapse" data-target="#row1info" aria-expanded="false" aria-controls="row1info">
+            <i class="fas fa-caret-down"></i>
+          </span>
+        </td>
+        <td>Solar</td>
+        <td>2024-02-09</td>
+        <td>Grid Operator X</td>
+        <td>100</td>
+        <td>Active</td>
+        <td>
+          <button class="btn btn-success">Buy</button>
+        </td>
+      </tr>
+      <tr id="row1info" class="collapse">
+        <td colspan="8">
+          <div class="card custom-card">
+            <div class="card-body">
+              <p>Additional Information:</p>
+              <ul>
+                <li>Issue Date: 2024-02-09</li>
+                <li>Owner: John Doe</li>
+                <li>Total Counts: 200</li>
+                <!-- Add more information as needed -->
+              </ul>
             </div>
           </div>
-      </div>
-    </div>
-  </div>
+        </td>
+      </tr>
+      <tr class="custom-card">
+        <td>2</td>
+        <td>
+          <span class="icon-container" data-toggle="collapse" data-target="#row2info" aria-expanded="false" aria-controls="row2info">
+            <i class="fas fa-caret-down"></i>
+          </span>
+        </td>
+        <td>Solar</td>
+        <td>2024-02-10</td>
+        <td>Grid Operator Y</td>
+        <td>150</td>
+        <td>Inactive</td>
+        <td>
+          <button class="btn btn-success">Buy</button>
+        </td>
+      </tr>
+      <tr id="row2info" class="collapse">
+        <td colspan="8">
+          <div class="card custom-card">
+            <div class="card-body">
+              <p>Additional Information:</p>
+              <ul>
+                <li>Issue Date: 2024-02-10</li>
+                <li>Owner: Jane Doe</li>
+                <li>Total Counts: 250</li>
+                <!-- Add more information as needed -->
+              </ul>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <!-- Add more rows as needed -->
+    </tbody>
+  </table>
 </div>
 
-<!-- Bootstrap Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-
-<script>
-  // Function to show the specified iframe and hide others
-  function showIframe(id) {
-    var iframes = document.getElementsByClassName("iframe-container");
-    for (var i = 0; i < iframes.length; i++) {
-      iframes[i].style.display = "none";
-    }
-    document.getElementById(id).style.display = "block";
-  }
-</script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"></script>
 
 </body>
 </html>

@@ -2062,7 +2062,7 @@ video {
 }
 
 .bio-graph-heading {
-  background: #0A6522;;
+  background: #0A6522;
   color: #fff;
   text-align: center;
   font-style: italic;
@@ -2387,5 +2387,20 @@ a.back-to-top:hover {
   margin-right: 5px; 
 }
 
-
+.custom-card {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px; 
+  transition: box-shadow 0.3s;
+}
+.custom-card:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.icon-container {
+  display: flex;
+  align-items: center;
+}
+.icon-container i {
+  margin-right: 5px;
+}
 
