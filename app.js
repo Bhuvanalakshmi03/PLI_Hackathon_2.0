@@ -15,18 +15,6 @@ app.get('/', (req, res) => {
   res.render('index');
 });
 
-app.get('/reg', (req, res) => {
-  res.render('reg');
-});
-
-app.get('/reg1', (req, res) => {
-  res.render('reg1');
-});
-
-app.get('/reg2', (req, res) => {
-  res.render('reg2');
-});
-
 
 app.get('/leaderboard', (req, res) => {
   res.render('leaderboard');
