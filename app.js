@@ -24,12 +24,13 @@ app.get('/userprofile', (req, res) => {
   res.render('userprofile');
 });
 
-app.get('/powerplant', (req, res) => {
-  res.render('powerplant');
+
+app.get('/buyrec', (req, res) => {
+  res.render('buyrec');
 });
 
-app.get('/trade', (req, res) => {
-  res.render('trade');
+app.get('/salerec', (req, res) => {
+  res.render('salerec');
 });
 
 app.get('/learning', (req, res) => {
