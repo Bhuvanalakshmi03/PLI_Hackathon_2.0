@@ -6,7 +6,7 @@ function openPopup(totalBuy, totalSell, totalBurned) {
   document.getElementById('total-buy').textContent = totalBuy;
   document.getElementById('total-sell').textContent = totalSell;
   document.getElementById('total-burned').textContent = totalBurned;
-  modal.style.display = 'block';
+  modal.style.display = 'flex';
 }
 
 span.onclick = function() {

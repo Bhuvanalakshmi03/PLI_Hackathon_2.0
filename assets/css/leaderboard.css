@@ -142,3 +142,39 @@ body, html {
 .list .item:hover .pos {
   opacity: 0.8;
 }
+
+.modal {
+  display: none; /* Hide the modal by default */
+  position: fixed; /* Position the modal relative to the viewport */
+  z-index: 9999; /* Ensure the modal appears above other content */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scrolling if needed */
+  background-color: rgba(0, 0, 0, 0.4); /* Black background with opacity */
+}
+
+.modal-content {
+  background-color: #fefefe; /* White background */
+  margin: auto; /* Center the modal horizontally and vertically */
+  padding: 20px;
+  border: 1px solid #434040;
+  width: 50%; /* Set the width of the modal */
+  align-items: center;
+}
+
+/* Close button style */
+.close {
+  color: #464646;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
