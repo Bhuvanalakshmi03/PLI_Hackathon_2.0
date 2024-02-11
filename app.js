@@ -1,6 +1,7 @@
 // Import necessary modules
 const express = require('express');
 const app = express();
+const sqlite3 = require('sqlite3')
 const path = require('path');
 
 
@@ -8,6 +9,10 @@ const path = require('path');
 app.set('view engine', 'ejs')
 // Assuming your CSS files are in a 'styles' directory
 app.use(express.static(path.join(__dirname, 'assets')));
+
+
+//db config
+const db = new sqlite3.Database('./DB/REC-reg.db')
 
 // Define a route
 
