@@ -16,6 +16,9 @@ const db = new sqlite3.Database('./DB/REC-reg.db')
 
 // Define a route
 
+const AuthRoute = require('./router/auth')
+app.use('/',AuthRoute)
+
 app.get('/', (req, res) => {
   res.render('index');
 });
@@ -46,12 +49,12 @@ app.get('/profile', (req, res) => {
   res.render('profile');
 });
 
-app.get('/login', (req, res) => {
-  res.render('login');
-});
-
 app.get('/request', (req, res) => {
   res.render('request');
+});
+
+app.get('/register', (req, res) => {
+  res.render('register');
 });
 
 
