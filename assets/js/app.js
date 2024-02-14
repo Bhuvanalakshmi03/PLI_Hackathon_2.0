@@ -45,7 +45,7 @@ App = {
     },
 
     loadAccount: async () => {
-        // get current account
+        window.location.href = `/index`
         web3.eth.getAccounts()
             .then(accounts => {
                 App.account = accounts[0]
@@ -77,12 +77,13 @@ App = {
         data['authority'] = document.getElementById('register_authority').value
         data['wallet_id'] = App.account
 
-        await App.contracts.user.methods.setUser(data['wallet_id'], data['name'], data['role'], data['authority']).send({ from: App.account });
+        await App.contracts.user.methods.setUser(data['wallet_id'], data['name'], data['location'], data['authority']).send({ from: App.account });
         let r = await fetch('/register', { method: 'POST', body: JSON.stringify(data), headers: { 'Content-type': 'application/json;charset=UTF-8' } })
         r = await r.json()
+        console.log(r)
         if (r) {
             alert(data['name'] + ' Welcome to the Application')
-            window.location.href = `/dashboard`
+            window.location.href = `/index`
         }
     },
 
@@ -100,7 +101,7 @@ App = {
         let r = await fetch('/login', { method: 'POST', body: JSON.stringify(data), headers: { 'Content-type': 'application/json; charset=UTF-8' } })
         r = await r.json();
         if (r) {
-            window.location.href = `/dashboard`
+            window.location.href = `/index`
         }
     },
 
@@ -128,7 +129,7 @@ App = {
         await App.contracts.token.methods.burnToken(App.account,1).send({from:App.account})
         .on('transactionHash', (hash) => {
             console.log('Transaction hash:', hash);
-            window.location.href = '/dashboard'
+            window.location.href = '/index'
         })
     },
 

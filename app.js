@@ -19,7 +19,7 @@ const db = new sqlite3.Database('./DB/REC-reg.db')
 const AuthRoute = require('./router/auth')
 app.use('/',AuthRoute)
 
-app.get('/', (req, res) => {
+app.get('/index', (req, res) => {
   res.render('index');
 });
 
@@ -35,11 +35,6 @@ app.get('/gameentry', (req, res) => {
 app.get('/leaderboard', (req, res) => {
   res.render('leaderboard');
 });
-
-app.get('/userprofile', (req, res) => {
-  res.render('userprofile');
-});
-
 
 app.get('/buyrec', (req, res) => {
   res.render('buyrec');
