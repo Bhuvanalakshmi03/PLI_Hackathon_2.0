@@ -68,7 +68,7 @@ With a 13.5% growth rate in REC from 2023 to 2032, Suryalekh targets a rapidly e
 1. **Node.js Server:**
    
     ```bash
-    nodemon app.js
+    nodemon app
     ```
 3. The application will be accessible at `localhost:4000` after starting the server.
 
