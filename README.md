@@ -80,8 +80,8 @@ With a 13.5% growth rate in REC from 2023 to 2032, Suryalekh targets a rapidly e
 
 ## Apotheum Testnet Deployed Contracts
 
-- REC Contract address : 0xFE1Cb840B345fA995709f538A676CD710F6F9231
-- USER Contract address : 0x4942FD73AE50dA35a7d207764e047cd9feAe008D
+- REC Contract : 0xFE1Cb840B345fA995709f538A676CD710F6F9231
+- USER Contract : 0x4942FD73AE50dA35a7d207764e047cd9feAe008D
 
 ## Conclusion
 
