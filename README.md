@@ -50,6 +50,27 @@ With a 13.5% growth rate in REC from 2023 to 2032, Suryalekh targets a rapidly e
 - **Database:** SQLite.
 - **Blockchain Security:** XDC, Solidity.
 
+# Tech Prerequisites
+- SQLite
+- Node.js v20.11
+- Truffle v5.7.7
+- Windows, Linux
+
+## Configuring the Application
+1. Clone the repository: `https://github.com/Bhuvanalakshmi03/PLI_Hackathon_2.0`
+2. Install the Node.js modules by opening the Command Prompt and running the following command:
+    ```bash
+    npm install
+    ```
+
+## Running the Application
+1. **Node.js Server:**
+    ```bash
+    nodemon app.js
+    ```
+2. The application will be accessible at `localhost:4000` after starting the server.
+
+
 
 ## Conclusion
 
