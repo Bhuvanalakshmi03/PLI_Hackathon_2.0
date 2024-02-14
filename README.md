@@ -84,6 +84,12 @@ With a 13.5% growth rate in REC from 2023 to 2032, Suryalekh targets a rapidly e
 Suryalekh envisions a future where businesses thrive by seamlessly integrating environmental responsibility through Renewable Energy Certificates (RECs). Our platform simplifies REC adoption, empowering companies to reduce their carbon footprint and elevate brand image. Choosing RECs isn't just a commitment; it's a strategic move for businesses to excel in a world 
 where sustainability is paramount. Join Suryalekh on a journey where each REC trade signifies a powerful step towards a greener, more prosperous business landscape.
 
+## Reference
+
+1. Zuo, Y., 2022. Tokenizing Renewable Energy Certificates (RECs)—A Blockchain Approach for REC Issuance and Trading. IEEE Access, 10, pp.134477-134490
+2. Holt, E., Sumner, J. and Bird, L., 2011. Role of Renewable Energy Certificates in Developing New Renewable Energy Projects (No. NREL/TP-6A20-51904). National Renewable Energy Lab.(NREL), Golden, CO (United States).
+3. Hulshof, D., Jepma, C. and Mulder, M., 2019. Performance of markets for European renewable energy certificates. Energy Policy, 128, pp.697-710.
+
 ## Application Screenshots
 
 - To be ubdated
