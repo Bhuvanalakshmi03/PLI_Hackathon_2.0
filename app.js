@@ -24,6 +24,14 @@ app.get('/', (req, res) => {
 });
 
 
+app.get('/game', (req, res) => {
+  res.render('game');
+});
+
+app.get('/gameentry', (req, res) => {
+  res.render('gameentry');
+});
+
 app.get('/leaderboard', (req, res) => {
   res.render('leaderboard');
 });
