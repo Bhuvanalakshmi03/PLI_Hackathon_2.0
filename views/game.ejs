@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('../templates/head') %>
+
+    <link rel="stylesheet" href="game.css">
+    <style>
+        body {
+    background-image: url('/img/game.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#gamifiedPage {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: rgba(0,0,0, 0.2); 
+    border-radius: 10px;
+}
+
+.game-part {
+    width: 48%;
+    height: 200px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    animation: gamifyAnimation 0.8s ease-in-out infinite alternate;
+}
+
+.game-part:hover {
+    transform: scale(1.1);
+    animation: none; 
+}
+
+@keyframes gamifyAnimation {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+.icon {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.solar-icon {
+    color: #f39c12; 
+}
+
+.user-icon {
+    color: #3498db; 
+}
+
+.team-info {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: rgb(0,100,0);
+    z-index: 1;
+}
+
+#pageTitle {
+    font-size: 24px;
+    color: rgb(0,100,0); 
+    margin-bottom: 20px;
+}
+    </style>
+
+<body>
+
+
+<div class="container mt-5" id="gamifiedPage">
+
+    <div class="game-part">
+
+        <div class="icon solar-icon"><i class="fas fa-solar-panel fa-3x"></i></div>
+        <div class="icon user-icon" style="top: 60%; left: 30%;"><i class="fas fa-user-tie fa-3x"></i></div>
+        <div class="icon user-icon" style="top: 50%; left: 80%;"><i class="fas fa-user-tie fa-3x"></i></div>
+        <div class="icon user-icon" style="top: 80%; left: 60%;"><i class="fas fa-user-tie fa-3x"></i></div>
+
+        <div class="team-info">
+            <h5>Team Alpha</h5>
+            <p>Points: 120</p>
+        </div>
+
+    </div>
+
+    
+    <div class="game-part">
+
+        <div class="icon solar-icon"><i class="fas fa-solar-panel fa-3x"></i></div>
+        <div class="icon user-icon" style="top: 60%; left: 30%;"><i class="fas fa-user-tie fa-3x"></i></div>
+        <div class="icon user-icon" style="top: 50%; left: 80%;"><i class="fas fa-user-tie fa-3x"></i></div>
+        <div class="icon user-icon" style="top: 80%; left: 60%;"><i class="fas fa-user-tie fa-3x"></i></div>
+
+        <div class="team-info">
+            <h5>Team Alpha</h5>
+            <p>Points: 120</p>
+        </div>
+
+    </div>
+
+    
+    <div class="game-part">
+
+        <div class="icon solar-icon"><i class="fas fa-solar-panel fa-3x"></i></div>
+        <div class="icon user-icon" style="top: 60%; left: 30%;"><i class="fas fa-user-tie fa-3x"></i></div>
+        <div class="icon user-icon" style="top: 50%; left: 80%;"><i class="fas fa-user-tie fa-3x"></i></div>
+        <div class="icon user-icon" style="top: 80%; left: 60%;"><i class="fas fa-user-tie fa-3x"></i></div>
+
+        <div class="team-info">
+            <h5>Team Alpha</h5>
+            <p>Points: 120</p>
+        </div>
+
+    </div>
+
+    
+    <div class="game-part">
+
+        <div class="icon solar-icon"><i class="fas fa-solar-panel fa-3x"></i></div>
+        <div class="icon user-icon" style="top: 60%; left: 30%;"><i class="fas fa-user-tie fa-3x"></i></div>
+        <div class="icon user-icon" style="top: 50%; left: 80%;"><i class="fas fa-user-tie fa-3x"></i></div>
+        <div class="icon user-icon" style="top: 80%; left: 60%;"><i class="fas fa-user-tie fa-3x"></i></div>
+
+        <div class="team-info">
+            <h5>Team Alpha</h5>
+            <p>Points: 120</p>
+        </div>
+
+    </div>
+
+
+    <div class="game-part">
+
+        <div class="icon solar-icon"><i class="fas fa-solar-panel fa-3x"></i></div>
+        <div class="icon user-icon" style="top: 60%; left: 30%;"><i class="fas fa-user-tie fa-3x"></i></div>
+        <div class="icon user-icon" style="top: 50%; left: 80%;"><i class="fas fa-user-tie fa-3x"></i></div>
+        <div class="icon user-icon" style="top: 80%; left: 60%;"><i class="fas fa-user-tie fa-3x"></i></div>
+
+        <div class="team-info">
+            <h5>Team Alpha</h5>
+            <p>Points: 120</p>
+        </div>
+
+    </div>
+
+    
+    <div class="game-part">
+
+        <div class="icon solar-icon"><i class="fas fa-solar-panel fa-3x"></i></div>
+        <div class="icon user-icon" style="top: 60%; left: 30%;"><i class="fas fa-user-tie fa-3x"></i></div>
+        <div class="icon user-icon" style="top: 50%; left: 80%;"><i class="fas fa-user-tie fa-3x"></i></div>
+        <div class="icon user-icon" style="top: 80%; left: 60%;"><i class="fas fa-user-tie fa-3x"></i></div>
+
+        <div class="team-info">
+            <h5>Team Alpha</h5>
+            <p>Points: 120</p>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+</body>
+</html>

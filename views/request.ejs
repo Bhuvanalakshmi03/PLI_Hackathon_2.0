@@ -46,18 +46,26 @@
                     <!-- Form for user input -->
                     <form>
                         <div class="mb-3">
-                            <label for="fullName" class="form-label">Full Name</label>
-                            <input type="text" class="form-control" id="fullName" required>
+                            <label for="walletID" class="form-label">walletID</label>
+                            <input type="address" class="form-control" id="walletID" required>
                         </div>
                         <div class="mb-3">
-                            <label for="email" class="form-label">Email Address</label>
-                            <input type="email" class="form-control" id="email" required>
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" required>
                         </div>
                         <div class="mb-3">
-                            <label for="reason" class="form-label">Reason for Request</label>
-                            <textarea class="form-control" id="reason" rows="3" required></textarea>
+                            <label for="location" class="form-label">Location of Power plant</label>
+                            <input type="text" class="form-control" id="location" required>
                         </div>
-                        <button onclick="App.recMark()" type="submit" class="btn btn-primary">Submit Request</button>
+                        <div class="mb-3">
+                            <label for="mwh" class="form-label">MWh generated</label>
+                            <input type="number" class="form-control" id="mwh" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="date" class="form-label">Reason for Request</label>
+                            <input type="date" class="form-control" id="date" required>
+                        </div>
+                        <button onclick="App.recMark()" class="login-button" type="button">Connect to wallet</button>
                     </form>
                 </div>
             </div>
@@ -66,8 +74,12 @@
 </div>
 
 <!-- Bootstrap JS and Popper.js (required for Bootstrap JavaScript plugins) -->
-<script src="../assets/js/app.js"></script>
+<script src="/js/app.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/truffle-contract@4.0.31/dist/truffle-contract.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.0-rc.0/web3.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
 </body>
 </html>
