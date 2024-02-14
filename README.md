@@ -36,7 +36,7 @@ To encourage healthy competition, Suryalekh features leaderboards displaying the
 - **Competition:** Establishing a leaderboard for REC traders.
 
 ## Demo Application
-to be ubdate
+- to be ubdate
 
 ## Market Analysis
 
@@ -70,8 +70,18 @@ With a 13.5% growth rate in REC from 2023 to 2032, Suryalekh targets a rapidly e
     ```
 2. The application will be accessible at `localhost:4000` after starting the server.
 
+## Execution Screenshot
+
+- NodeJS Server Check
+
+  ![Capture](https://github.com/Bhuvanalakshmi03/PLI_Hackathon_2.0/assets/103051896/3e6bcb3b-b2d2-4180-a51e-bf39fda7316f)
 
 
 ## Conclusion
 
-Suryalekh envisions a future where businesses thrive by seamlessly integrating environmental responsibility through Renewable Energy Certificates (RECs). Our platform simplifies REC adoption, empowering companies to reduce their carbon footprint and elevate brand image. Choosing RECs isn't just a commitment; it's a strategic move for businesses to excel in a world where sustainability is paramount. Join Suryalekh on a journey where each REC trade signifies a powerful step towards a greener, more prosperous business landscape.
+Suryalekh envisions a future where businesses thrive by seamlessly integrating environmental responsibility through Renewable Energy Certificates (RECs). Our platform simplifies REC adoption, empowering companies to reduce their carbon footprint and elevate brand image. Choosing RECs isn't just a commitment; it's a strategic move for businesses to excel in a world 
+where sustainability is paramount. Join Suryalekh on a journey where each REC trade signifies a powerful step towards a greener, more prosperous business landscape.
+
+## Application Screenshots
+
+- To be ubdated
