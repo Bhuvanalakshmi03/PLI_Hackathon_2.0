@@ -6,8 +6,6 @@ In a world increasingly focused on sustainability, Renewable Energy Certificates
 
 ## Problem Analysis in Existing Systems
 
-In the current REC scenario, we identified significant challenges:
-
 - **Complexity:** Existing platforms lack user-friendly interfaces.
 - **Lack of Awareness:** Users face difficulty in understanding REC usage and trading.
 - **Engagement Issues:** Absence of gamification elements results in low user interaction.
@@ -24,15 +22,13 @@ Our educational platform provides video tutorials, empowering users with insight
 
 ### iii) Gamification
 
-Suryalekh takes trading to the next level by incorporating gamification. Users can invest their RECs in Solarville, a virtual town, capturing areas and earning XDC coins as rewards.
+Suryalekh introduces gamification, rewarding users with points from REC holdings, leaderboard rankings, and daily activity. Upon accumulating 500 points, users enter virtual town named as Solarville, collaborating with two others to trade and generate RECs. Team points determine the top-performing team, earning them XDC coins for additional income.This boosts engagement and provides an opportunity for additional income.
 
 ### iv) Leaderboard
 
 To encourage healthy competition, Suryalekh features leaderboards displaying the top REC traders monthly. This engages users and adds a competitive edge to the trading experience.
 
 ## Actual Need of Suryalekh and REC
-
-Suryalekh addresses the crucial need for:
 
 - **User-Friendly REC Trading:** Making it accessible to a wider audience.
 - **Education:** Fostering awareness about REC and renewable energy.
@@ -44,8 +40,6 @@ Suryalekh addresses the crucial need for:
 With a 13.5% growth rate in REC from 2023 to 2032, Suryalekh targets a rapidly expanding market. The Total Addressable Market (TAM) is set to reach $1 trillion USD by 2030, with our platform covering 50-70% of this market.
 
 ## Tech Stack
-
-Suryalekh utilizes a robust tech stack to ensure a seamless user experience:
 
 - **Frontend:** HTML, CSS, JS.
 - **Backend:** Node.js, Express.
