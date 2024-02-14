@@ -4,7 +4,7 @@
 
 In a world increasingly focused on sustainability, Renewable Energy Certificates (RECs) have emerged as powerful instruments bridging environmental responsibility with business growth. A REC is a tradable, intangible asset representing the positive environmental impact of generating one megawatt-hour (MWh) of electricity from renewable sources. It serves as a testament to a commitment to clean energy practices and provides a pathway for businesses to align their operations with environmental stewardship.
 
-## Problem Analysis in Existing Systems
+## Problem Identify
 
 - **Complexity:** Existing platforms lack user-friendly interfaces.
 - **Lack of Awareness:** Users face difficulty in understanding REC usage and trading.
@@ -35,6 +35,9 @@ To encourage healthy competition, Suryalekh features leaderboards displaying the
 - **Engagement:** Gamifying the experience to keep users involved.
 - **Competition:** Establishing a leaderboard for REC traders.
 
+## Demo Application
+to be ubdate
+
 ## Market Analysis
 
 With a 13.5% growth rate in REC from 2023 to 2032, Suryalekh targets a rapidly expanding market. The Total Addressable Market (TAM) is set to reach $1 trillion USD by 2030, with our platform covering 50-70% of this market.
@@ -46,6 +49,7 @@ With a 13.5% growth rate in REC from 2023 to 2032, Suryalekh targets a rapidly e
 - **Dynamic Content:** EJS.
 - **Database:** SQLite.
 - **Blockchain Security:** XDC, Solidity.
+
 
 ## Conclusion
 
