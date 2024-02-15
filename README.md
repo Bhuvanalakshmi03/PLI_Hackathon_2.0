@@ -93,6 +93,9 @@ With a 13.5% growth rate in REC from 2023 to 2032, Suryalekh targets a rapidly e
 
 - REC Contract : 0xFE1Cb840B345fA995709f538A676CD710F6F9231
 - USER Contract : 0x4942FD73AE50dA35a7d207764e047cd9feAe008D
+- XRC20 Token: xdc16b193CD70549dDFFe2E8119d978e28e530902F5
+- XRC20 MarketPlace :xdc4C851E1f55E67ED250289eF792190b88Ec17F249
+
 
 ## Conclusion
 
