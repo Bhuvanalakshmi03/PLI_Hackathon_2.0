@@ -45,9 +45,8 @@ App = {
     },
 
     loadAccount: async () => {
-        window.location.href = `/index`
-        web3.eth.getAccounts()
-            .then(accounts => {
+        // window.location.href = `/index`
+        web3.eth.getAccounts().then(accounts => {
                 App.account = accounts[0]
                 console.log(App.account)
             })
@@ -59,13 +58,23 @@ App = {
     loadContracts: async () => {
         // rec ABI
         const RECContract = await $.getJSON('../build/contracts/REC.json')
-        const contractAddress = '0xFE1Cb840B345fA995709f538A676CD710F6F9231';
+        const contractAddress = '0xe5E7bE6F4F947FA53aB57eDEC09EA1E87CF41009';
         App.contracts.rec = new web3.eth.Contract(RECContract.abi, contractAddress);
 
         // users ABI
         const UserContract = await $.getJSON('../build/contracts/UserAuth.json')
-        const UserAddress = '0x4942FD73AE50dA35a7d207764e047cd9feAe008D';
+        const UserAddress = '0x987946dD7F5c4cd7A0E179bA49C63f0089aE43C6';
         App.contracts.user = new web3.eth.Contract(UserContract.abi, UserAddress);
+
+        // // users ABI
+        // const TokenContract = await $.getJSON('../build/contracts/XRC20Token.json')
+        // const TokenAddress = '0x16b193CD70549dDFFe2E8119d978e28e530902F5';
+        // App.contracts.user = new web3.eth.Contract(TokenContract.abi, TokenAddress);
+
+        // // users ABI
+        // const MarketPlaceContract = await $.getJSON('../build/contracts/XRC20Marketplace.json')
+        // const MarketPlaceAddress = '0x4C851E1f55E67ED250289eF792190b88Ec17F249';
+        // App.contracts.user = new web3.eth.Contract(UserContract.abi, MarketPlaceAddress);
     },
 
     WalletRegister: async () => {
@@ -183,6 +192,27 @@ App = {
         }
         tabel_body.innerHTML = html
 
+    },
+
+    Sale:async () => {
+        await App.load()
+        const price = document.getElementById('price').value
+        await App.contracts.rec.methods
+            .createRECData(App.account, 'bhuvana', 'theni', '10', '10-03-2023')
+            .send({ from: App.account, value: '100000000' })
+        localStorage.setItem('sale',price)
+        window.location.href = `/market`
+    },
+
+    Buy:async () => {
+        await App.load()
+        const price = 2
+        await App.contracts.rec.methods
+            .createRECData(App.account, 'bhuvana', 'theni', '10', '10-03-2023')
+            .send({ from: App.account, value: '100000000' })
+        localStorage.setItem('buy',price)
+
+        window.location.href = `/market`
     },
 
     SpecificFetchREC: async () => {
