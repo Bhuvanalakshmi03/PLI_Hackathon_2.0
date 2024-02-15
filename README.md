@@ -10,6 +10,17 @@ In a world increasingly focused on sustainability, Renewable Energy Certificates
 - **Lack of Awareness:** Users face difficulty in understanding REC usage and trading.
 - **Engagement Issues:** Absence of gamification elements results in low user interaction.
 
+## Deployed Contracts (XDC testnet Apothem)
+
+- **Token Creation :** https://apothem.blocksscan.io/address/xdc16b193CD70549dDFFe2E8119d978e28e530902F5#transactions
+
+- **Market Place :** https://apothem.blocksscan.io/address/xdc4C851E1f55E67ED250289eF792190b88Ec17F249#transactions
+
+- **REC :** https://apothem.blocksscan.io/address/0xFE1Cb840B345fA995709f538A676CD710F6F9231#transactions
+
+- **User Auth :** https://apothem.blocksscan.io/address/0x4942FD73AE50dA35a7d207764e047cd9feAe008D#transactions
+
+
 ## Suryalekh's Solutions
 
 ### i) Trading
