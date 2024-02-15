@@ -10,6 +10,7 @@ Suryalekh's architecture is designed for seamless user interaction, featuring a 
 
 ![Capture1](https://github.com/Bhuvanalakshmi03/PLI_Hackathon_2.0/assets/103051896/704ca898-c726-4ed0-9579-2edb1e82415d)
 
+
 ![WhatsApp Image 2024-02-15 at 7 48 49 PM](https://github.com/Bhuvanalakshmi03/PLI_Hackathon_2.0/assets/103051896/1582933c-3f80-4260-af31-0872dd053550)
 
 
@@ -21,16 +22,6 @@ Suryalekh's architecture is designed for seamless user interaction, featuring a 
 1. **Complexity:** Existing platforms lack user-friendly interfaces.
 2. **Lack of Awareness:** Users face difficulty in understanding REC usage and trading.
 3. **Engagement Issues:** Absence of gamification elements results in low user interaction.
-
-## Blockchain Agreements on XDC's Apothem Testnet
-
-- **Token Creation :** https://apothem.blocksscan.io/address/xdc16b193CD70549dDFFe2E8119d978e28e530902F5#transactions
-
-- **Market Place :** https://apothem.blocksscan.io/address/xdc4C851E1f55E67ED250289eF792190b88Ec17F249#transactions
-
-- **REC :** https://apothem.blocksscan.io/address/0xFE1Cb840B345fA995709f538A676CD710F6F9231#transactions
-
-- **User Auth :** https://apothem.blocksscan.io/address/0x4942FD73AE50dA35a7d207764e047cd9feAe008D#transactions
 
 
 ## Suryalekh's Solutions
@@ -102,6 +93,17 @@ With a 13.5% growth rate in REC from 2023 to 2032, Suryalekh targets a rapidly e
 ## Execution Screenshot
 
 ![Capture](https://github.com/Bhuvanalakshmi03/PLI_Hackathon_2.0/assets/103051896/0330ea68-a924-4eda-b2a4-6feab8f250f7)
+
+
+## Blockchain Agreements on XDC's Apothem Testnet
+
+- **Token Creation :** https://apothem.blocksscan.io/address/xdc16b193CD70549dDFFe2E8119d978e28e530902F5#transactions
+
+- **Market Place :** https://apothem.blocksscan.io/address/xdc4C851E1f55E67ED250289eF792190b88Ec17F249#transactions
+
+- **REC :** https://apothem.blocksscan.io/address/0xFE1Cb840B345fA995709f538A676CD710F6F9231#transactions
+
+- **User Auth :** https://apothem.blocksscan.io/address/0x4942FD73AE50dA35a7d207764e047cd9feAe008D#transactions
 
 
 ## Contracts Deployed on Apotheum Testnet (XDC)
