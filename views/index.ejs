@@ -672,12 +672,28 @@
 
 
 
-
   <%- include('../templates/scripts') %>
 
 
   <!-- Template Main JS File -->
   <script src="/js/main.js"></script>
+  <!-- <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Check if there is a streak count stored in localStorage
+        let streakCount = localStorage.getItem("streakCount");
+        
+        // If no streak count found, initialize it to 1
+        if (!streakCount) {
+            streakCount = 1;
+        }
+        
+        // Display the streak message
+        alert("You have " + streakCount + " daily streak");
+        
+        // Update streak count for the next visit
+        localStorage.setItem("streakCount", parseInt(streakCount) + 1);
+    });
+    </script> -->
   
 
 </body>

@@ -45,7 +45,7 @@ App = {
     },
 
     loadAccount: async () => {
-        // window.location.href = `/index`
+        //  window.location.href = `/index`
         web3.eth.getAccounts().then(accounts => {
                 App.account = accounts[0]
                 console.log(App.account)
@@ -201,7 +201,7 @@ App = {
             .createRECData(App.account, 'bhuvana', 'theni', '10', '10-03-2023')
             .send({ from: App.account, value: '100000000' })
         localStorage.setItem('sale',price)
-        window.location.href = `/market`
+        window.location.href = `/buyrec`
     },
 
     Buy:async () => {
@@ -210,9 +210,9 @@ App = {
         await App.contracts.rec.methods
             .createRECData(App.account, 'bhuvana', 'theni', '10', '10-03-2023')
             .send({ from: App.account, value: '100000000' })
-        localStorage.setItem('buy',price)
+        localStorage.setItem('/index',price)
 
-        window.location.href = `/market`
+        window.location.href = `/index`
     },
 
     SpecificFetchREC: async () => {
