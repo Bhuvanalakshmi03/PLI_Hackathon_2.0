@@ -51,6 +51,14 @@ To encourage healthy competition, Suryalekh features leaderboards displaying the
 
 ## Demo Application
 
+https://github.com/Bhuvanalakshmi03/PLI_Hackathon_2.0/assets/125199381/7354dd15-9bbd-40d1-b1b7-942bbbe22c68
+
+
+
+
+
+
+
 
 
 ## Market Analysis
