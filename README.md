@@ -8,6 +8,14 @@ In an era focused on sustainability, Renewable Energy Certificates (RECs) stand 
 
 Suryalekh's architecture is designed for seamless user interaction, featuring a user-friendly trading platform on the XDC network. The system ensures accessibility for both experienced traders and newcomers, fostering a dynamic REC trading experience.
 
+![Capture1](https://github.com/Bhuvanalakshmi03/PLI_Hackathon_2.0/assets/103051896/704ca898-c726-4ed0-9579-2edb1e82415d)
+
+![WhatsApp Image 2024-02-15 at 7 48 49 PM](https://github.com/Bhuvanalakshmi03/PLI_Hackathon_2.0/assets/103051896/1582933c-3f80-4260-af31-0872dd053550)
+
+
+![WhatsApp Image 2024-02-15 at 7 48 49 PM (1)](https://github.com/Bhuvanalakshmi03/PLI_Hackathon_2.0/assets/103051896/84f2a084-3a4d-4fd6-bcfc-6c1308903269)
+
+
 ## Problem Identification
 
 1. **Complexity:** Existing platforms lack user-friendly interfaces.
@@ -29,7 +37,7 @@ Suryalekh's architecture is designed for seamless user interaction, featuring a 
 
 ### 1. Trading Platform
 
-Suryalekh simplifies the REC trading process, introducing a user-friendly platform on the XDC network. This ensures accessibility for both experienced traders and newcomers.
+Suryalekh introduces a user-friendly trading platform on the XDC network. It simplifies the REC trading process, making it accessible for both experienced traders and newcomers.
 
 ### 2. Educational Platform
 
@@ -37,7 +45,7 @@ The platform includes video tutorials, empowering users with insights into REC, 
 
 ### 3. Gamification
 
-Suryalekh integrates gamification, rewarding users with points from REC holdings, leaderboard rankings, and daily activity. This innovative approach enhances engagement, making REC trading an interactive and rewarding experience.
+Suryalekh introduces gamification, rewarding users with points from REC holdings, leaderboard rankings, and daily activity. Upon accumulating 500 points, users enter virtual town named as Solarville, collaborating with two others to trade and generate RECs. Team points determine the top-performing team, earning them XDC coins for additional income.This boosts engagement and provides an opportunity for additional income.
 
 ### 4. Leaderboard
 
