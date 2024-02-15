@@ -39,7 +39,7 @@ Suryalekh introduces gamification, rewarding users with points from REC holdings
 
 To encourage healthy competition, Suryalekh features leaderboards displaying the top REC traders monthly. This engages users and adds a competitive edge to the trading experience.
 
-## Actual Need of Suryalekh and REC
+## Need of Suryalekh and REC
 
 - **User-Friendly REC Trading:** Making it accessible to a wider audience.
 - **Education:** Fostering awareness about REC and renewable energy.
