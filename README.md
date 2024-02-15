@@ -113,6 +113,12 @@ With a 13.5% growth rate in REC from 2023 to 2032, Suryalekh targets a rapidly e
 - **XRC20 Token:** xdc16b193CD70549dDFFe2E8119d978e28e530902F5
 - **XRC20 Marketplace :** xdc4C851E1f55E67ED250289eF792190b88Ec17F249
 
+
+##**APPLICATION DEPLOY LINK**
+Visit our site by clicking the link below
+
+https://suryalekh.onrender.com/
+
 ## Conclusion
 
 Suryalekh envisions a future where businesses seamlessly integrate environmental responsibility through Renewable Energy Certificates (RECs). Our platform simplifies REC adoption, empowering companies to reduce their carbon footprint and elevate brand image. Choosing RECs isn't just a commitment; it's a strategic move for businesses to excel in a world where sustainability is paramount. Join Suryalekh on a journey where each REC trade signifies a powerful step towards a greener, more prosperous business landscape.
