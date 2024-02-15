@@ -3,89 +3,34 @@ pragma solidity >=0.8.0 <0.9.0;
 
 /**
  * @title XRC20 Token
- * @dev This is the a XinFin Network Compatible XRC20 token for Renewable Energy Certificates (RECs).
+ * @dev This is the a XinFin Network Compatible XRC20 token.
  */
 
 contract XRC20Token {
+
     string public name;
     string public symbol;
-    uint8 public decimals;
 
     uint256 private _totalSupply;
-    uint256 private remainingEnergy; // Track remaining renewable energy
     
-    address public authorizedOracle; // Authorized entity for minting
-    address public plantControllerAddress; // Controller of the renewable energy plant
-    address public renewableGeneratorAddress; // Address of the renewable energy generator
-    address public owner;
-
-    mapping(address => uint256) private balances;
-    mapping(address => mapping(address => uint256)) private allowances;
-    mapping(address => bool) public isEnergyGenerator; // Track valid energy generators
-
-    event EnergyGeneratorAdded(address indexed generatorAddress);
-    event EnergyTokensMinted(address indexed generatorAddress, uint256 tokensMinted, uint256 energyMinted);
-    event Approval(address indexed owner, address indexed spender, uint256 value);
-    event Transfer(address indexed from, address indexed to, uint256 value);
-    event MintREC(uint256 tokensMinted, uint256 energyMinted);
-
-     // Modifier to ensure that only the contract owner or authorized entities can perform certain actions
-    modifier onlyAuthorized() {
-        require(
-            msg.sender == owner || msg.sender == authorizedOracle || msg.sender == plantControllerAddress,
-            "Unauthorized caller"
-        );
-        _;
-    }
-
-    modifier onlyOwner() {
-        require(msg.sender == owner, "Only owner can perform this action");
-        _;
-    }
-
-    constructor(
-        string memory _name,
-        string memory _symbol,
-        uint8 _decimals,
-        uint256 _initialSupply,
-        address _authorizedOracle,
-        address _plantControllerAddress,
-        address _renewableGeneratorAddress,
-        uint256 _initialEnergy // New parameter for initial renewable energy
-    ) {
+    mapping(address => uint) private balances;
+    mapping(address => mapping(address => uint)) private allowances;
+    mapping(address => bool) public validators; // Added validators mapping
+    
+    event Approval(address indexed owner, address indexed spender, uint value);
+    event Transfer(address indexed from, address indexed to, uint value);
+    event RECRequested(address indexed requester, string indexed powerPlantOwner, string location, uint256 energyGenerated);
+    event RECValidated(address indexed validator, uint indexed recIndex);
+    event RECRetired(address indexed holder, uint256 amount);
+    event Mint(address indexed to, uint256 amount);
+      
+    constructor(string memory _name, string memory _symbol, uint256 _initialSupply) {
         name = _name;
         symbol = _symbol;
-        decimals = _decimals;
-        authorizedOracle = _authorizedOracle;
-        plantControllerAddress = _plantControllerAddress;
-        renewableGeneratorAddress = _renewableGeneratorAddress;
-        owner = msg.sender;
 
-        _totalSupply += _initialSupply * 10**decimals;
-        balances[_renewableGeneratorAddress] = _initialEnergy * 10**decimals; // Mint initial tokens to the renewable energy generator
-        remainingEnergy = (_initialSupply - _initialEnergy) * 10**decimals; // Set remaining energy
-        
-        emit Transfer(address(0), _renewableGeneratorAddress, _initialEnergy * 10**decimals);
-        emit Transfer(address(0), msg.sender, (_initialSupply - _initialEnergy) * 10**decimals);
-    }
-
-    // Function to add an energy generator dynamically
-    function addEnergyGenerator(address _generatorAddress) external onlyOwner {
-        isEnergyGenerator[_generatorAddress] = true;
-        emit EnergyGeneratorAdded(_generatorAddress);
-    }
-
-    // Function to mint tokens for a specific energy generator
-    function mintTokensForGenerator(address _generatorAddress, uint256 _energy) external onlyAuthorized {
-        require(isEnergyGenerator[_generatorAddress], "Not a valid energy generator");
-
-        uint256 tokensToMint = _energy * 10**decimals;
-        _totalSupply += tokensToMint;
-        balances[_generatorAddress] += tokensToMint;
-        remainingEnergy -= _energy;
-
-        emit EnergyTokensMinted(_generatorAddress, tokensToMint, _energy);
-        emit Transfer(address(0), _generatorAddress, tokensToMint);
+        _totalSupply += _initialSupply;
+        balances[msg.sender] = _totalSupply;
+        emit Transfer(address(0), msg.sender, _totalSupply);
     }
 
     function totalSupply() public view returns (uint256) {
@@ -96,24 +41,14 @@ contract XRC20Token {
         return balances[account];
     }
 
-    function getRemainingEnergy() public view returns (uint256) {
-        return remainingEnergy;
+    function allowance(address owner, address spender) public view returns (uint256) {
+        return allowances[owner][spender];
     }
 
-    function mintREC(uint256 _energy) public {
-        require(msg.sender == authorizedOracle || msg.sender == plantControllerAddress, "Unauthorized caller");
-        require(_energy <= remainingEnergy, "Insufficient renewable energy for minting");
-
-        uint256 tokensToMint = _energy * 10**decimals;
-        _totalSupply += tokensToMint;
-        balances[renewableGeneratorAddress] += tokensToMint;
-        remainingEnergy -= _energy;
-
-        emit MintREC(tokensToMint, _energy);
-        emit Transfer(address(0), renewableGeneratorAddress, tokensToMint);
-    }
-
-     function transfer(address recipient, uint amount) external returns (bool) {
+    function transfer(address recipient, uint amount) external returns (bool) {
+        require(recipient != address(0), "XRC20: transfer to the zero address");
+        require(amount <= balances[msg.sender], "XRC20: transfer amount exceeds balance");
+        
         balances[msg.sender] -= amount;
         balances[recipient] += amount;
         emit Transfer(msg.sender, recipient, amount);
@@ -126,15 +61,55 @@ contract XRC20Token {
         return true;
     }
 
-    function transferFrom(
-        address sender,
-        address recipient,
-        uint amount
-    ) external returns (bool) {
+    function transferFrom(address sender, address recipient, uint amount) external returns (bool) {
+        require(sender != address(0), "XRC20: transfer from the zero address");
+        require(recipient != address(0), "XRC20: transfer to the zero address");
+        require(amount <= balances[sender], "XRC20: transfer amount exceeds balance");
+        require(amount <= allowances[sender][msg.sender], "XRC20: transfer amount exceeds allowance");
+        
         allowances[sender][msg.sender] -= amount;
         balances[sender] -= amount;
         balances[recipient] += amount;
         emit Transfer(sender, recipient, amount);
         return true;
+    }
+
+    function requestREC(string memory _powerPlantOwner, string memory _location, uint256 _energyGenerated) external {
+        require(_energyGenerated > 0, "XRC20: Energy generated must be greater than zero");
+        
+        emit RECRequested(msg.sender, _powerPlantOwner, _location, _energyGenerated);
+    }
+    
+    function validateREC(uint256 _recIndex) external {
+        require(validators[msg.sender], "XRC20: Only validators can validate REC");
+        emit RECValidated(msg.sender, _recIndex);
+    }
+    
+    function retireREC(uint256 _amount) external {
+        require(_amount <= balances[msg.sender], "XRC20: Insufficient REC balance");
+        balances[msg.sender] -= _amount;
+        _totalSupply -= _amount;
+        emit RECRetired(msg.sender, _amount);
+    }
+    
+    // Function to add or remove validators
+    function setValidator(address _validator, bool _status) external {
+        require(msg.sender == owner(), "XRC20: Only contract owner can set validators");
+        validators[_validator] = _status;
+    }
+    
+    // Function to get contract owner
+    function owner() public view returns (address) {
+        return address(this);
+    }
+    
+    // Function to mint new tokens
+    function mint(address _to, uint256 _amount) external {
+        require(msg.sender == owner(), "XRC20: Only contract owner can mint tokens");
+        
+        _totalSupply += _amount;
+        balances[_to] += _amount;
+        emit Mint(_to, _amount);
+        emit Transfer(address(0), _to, _amount);
     }
 }
