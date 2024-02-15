@@ -4,6 +4,19 @@
 
 In a world increasingly focused on sustainability, Renewable Energy Certificates (RECs) have emerged as powerful instruments bridging environmental responsibility with business growth. A REC is a tradable, intangible asset representing the positive environmental impact of generating one megawatt-hour (MWh) of electricity from renewable sources. It serves as a testament to a commitment to clean energy practices and provides a pathway for businesses to align their operations with environmental stewardship.
 
+![REC](https://github.com/Bhuvanalakshmi03/PLI_Hackathon_2.0/assets/125199381/b56eae97-b6d0-4775-9714-b4746ed00ae9)
+
+**Architecture**
+
+
+![Screenshot 2024-02-15 155332](https://github.com/Bhuvanalakshmi03/PLI_Hackathon_2.0/assets/125199381/9d0d09ee-e888-47b0-a067-e8c069f5f92a)
+
+**Lifecycle**
+
+
+![Screenshot 2024-02-15 155321](https://github.com/Bhuvanalakshmi03/PLI_Hackathon_2.0/assets/125199381/764c0a63-5dde-43be-923c-f5f53476dd0b)
+
+
 ## Problem Identify
 
 - **Complexity:** Existing platforms lack user-friendly interfaces.
